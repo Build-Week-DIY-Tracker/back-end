@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c4759ed7-a8d7-43f5-9eea-99b0da54f450" name="Default Changelist" comment=".">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/BookstoreApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/SeedData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/AuthorizationServerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/DataSourceConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/H2ServerConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/ResourceServerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/SimpleCorsFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/Swagger2Config.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/SwaggerManualApiPlugin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/controllers/APIsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/controllers/FileController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/controllers/LogoutController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/controllers/OpenController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/controllers/RolesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/controllers/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/controllers/UseremailController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/exceptions/FileStorageException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/exceptions/MyFileNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/exceptions/ResourceFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/exceptions/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/exceptions/ValidationError.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/handlers/RestExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/logging/LogWriter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/logging/Loggable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/logging/LoggingAspect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/APIOpenLibrary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/Auditable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/ErrorDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/TokenModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/UserLogin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/UserMinimum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/UserRoles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/Useremail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/payload/UploadFileResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/property/FileStorageProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/repository/RoleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/repository/UseremailRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/FileStorageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/RoleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/RoleServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/UserAuditing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/UseremailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/UseremailServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/view/JustTheCount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/info/ChangeLog.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/info/curl.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lambdaschool/bookstore/BookstoreApplicationTests.java" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>starthere</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>bookstore</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/example/bookstore/repository/RoleRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/bookstore/config/DataSourceConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/controllers/APIsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/handlers/RestExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/Auditable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/controllers/RolesController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/controllers/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/controllers/UseremailController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/ErrorDetail.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/Role.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/TokenModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/Useremail.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/UserRoles.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/repository/RoleRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/repository/UseremailRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/repository/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/RoleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/RoleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/UserAuditing.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/UseremailService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/UseremailServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/logback-spring.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/AuthorizationServerConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/controllers/OpenController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/H2ServerConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/ResourceServerConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/SimpleCorsFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/Swagger2Config.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/SwaggerManualApiPlugin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/controllers/LogoutController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/APIOpenLibrary.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/UserMinimum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/UserLogin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/logging/LoggingAspect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/SeedData.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/diytracker/services/UseremailService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/diytracker/controllers/FileUploadController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/DataSourceConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/property/FileStorageProperties.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/BookstoreApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/controllers/FileUploadController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/payload/UploadFileResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/FileStorageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/exceptions/FileStorageException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/exceptions/MyFileNotFoundException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/controllers/FileController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="bookstore" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1913" />
+    <option name="y" value="551" />
+    <option name="width" value="974" />
+    <option name="height" value="1057" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+            <path>
+              <item name="bookstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Extensions" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.bookstore" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.lambdaschool.bookstore" />
+      <recent name="com.lambdaschool.bookstore.services" />
+      <recent name="com.example.bookstore.config.view" />
+      <recent name="com.example.bookstore.handlers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\nahmu\java\java-starthere\bookstore\src\main\resources" />
+      <recent name="C:\Users\nahmu\java\java-starthere\bookstore\src\main\java\com\example\bookstore" />
+      <recent name="C:\Users\nahmu\java\java-starthere\bookstore\src\main\java\com\example\bookstore\config" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="BookstoreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="diytracker" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lambdaschool.bookstore.BookstoreApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c4759ed7-a8d7-43f5-9eea-99b0da54f450" name="Default Changelist" comment="" />
+      <created>1571367799428</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571367799428</updated>
+      <workItem from="1571367803469" duration="13745000" />
+      <workItem from="1571466346121" duration="1624000" />
+      <workItem from="1571512473665" duration="4109000" />
+      <workItem from="1571536658455" duration="85000" />
+      <workItem from="1571536762951" duration="80000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="19643000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1912" y="543" width="1936" height="1066" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33834586" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3296582" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.16648291" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.04189636" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.04189636" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.020408163" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33351237" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3296582" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.16648291" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.04189636" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.04189636" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.020408163" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/ErrorDetail.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/Role.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/TokenModel.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/User.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/Useremail.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/UserRoles.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/repository/RoleRepository.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/repository/UseremailRepository.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/repository/UserRepository.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/RoleService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/RoleServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/UseremailServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/UserService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/UserServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/logback-spring.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/ResourceServerConfig.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/SimpleCorsFilter.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/APIOpenLibrary.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/UserMinimum.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/models/UserLogin.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/UserAuditing.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/lambdaschool/bookstore/BookstoreApplicationTests.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/info/curl.txt" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/controllers/RolesController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/logging/Loggable.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/handlers/RestExceptionHandler.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/controllers/APIsController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/exceptions/ValidationError.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/logging/LogWriter.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/logging/LoggingAspect.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/SeedData.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/controllers/UserController.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/H2ServerConfiguration.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/DataSourceConfig.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/SecurityConfig.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/Swagger2Config.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/SwaggerManualApiPlugin.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/WebConfig.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/config/AuthorizationServerConfig.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/UseremailService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/BookstoreApplication.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/controllers/FileController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/services/FileStorageService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/exceptions/FileStorageException.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/exceptions/MyFileNotFoundException.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/payload/UploadFileResponse.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/controllers/LogoutController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/controllers/OpenController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lambdaschool/bookstore/property/FileStorageProperties.java" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+  <component name="mavenExecuteGoalHistory">
+    <option value="$PROJECT_DIR$" />
+    <option value="clean heroku:deploy -X" />
+  </component>
+</project>
