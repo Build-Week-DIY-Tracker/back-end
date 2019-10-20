@@ -1,6 +1,7 @@
 package com.lambdaschool.diytracker.controllers;
 
 import com.lambdaschool.diytracker.logging.Loggable;
+import com.lambdaschool.diytracker.models.ProjectPost;
 import com.lambdaschool.diytracker.models.User;
 import com.lambdaschool.diytracker.services.UserService;
 import io.swagger.annotations.ApiImplicitParam;
@@ -303,6 +304,13 @@ public class UserController
         userService.addUserRole(userid,
                                 roleid);
 
+        return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+
+    @PostMapping(value = "/project/{userid}", consumes = {"application/json"}, produces = {"application/json"})
+    public ResponseEntity<?> addProject(@Valid @RequestBody
+                                                ProjectPost projectPost, @PathVariable long userid) {
+        userService.addProject(projectPost, userid);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 }

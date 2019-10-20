@@ -51,7 +51,7 @@ public class User extends Auditable
             cascade = CascadeType.ALL,
             orphanRemoval = true)
     @JsonIgnoreProperties("user")
-    private List<ProjectPost> posts = new ArrayList<>();
+    private List<ProjectPost> projects = new ArrayList<>();
 
     public User()
     {

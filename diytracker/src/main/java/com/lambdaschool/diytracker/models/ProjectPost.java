@@ -8,7 +8,7 @@ import javax.validation.constraints.Email;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity(name="projectposts")
+@Entity(name="projects")
 public class ProjectPost
 {
 	@Id
@@ -25,21 +25,18 @@ public class ProjectPost
 			unique = true)
 	private String projectname;
 
-	@Column(nullable = false)
+	@Column(nullable = true)
 	private String projectlink;
-
-	@Column(nullable = false)
-	private String description;
 
 
 	@OneToMany(mappedBy = "projectPost",
 			cascade = CascadeType.ALL,
 			orphanRemoval = true)
 	@JsonIgnoreProperties("photo")
-	private List<Photo> photos = new ArrayList<>();
+	private List<DBFile> photos = new ArrayList<>();
 
-	@Column(nullable = false)
-	private int likescount;
+	@Column(nullable = true)
+	private int likescount = 0;
 
 	//constructor
 	public ProjectPost()
@@ -57,14 +54,6 @@ public class ProjectPost
 		this.user = user;
 		this.projectname = projectname;
 		this.projectlink = projectlink;
-	}
-
-	public ProjectPost(User user, String projectname, String projectlink, String description)
-	{
-		this.user = user;
-		this.projectname = projectname;
-		this.projectlink = projectlink;
-		this.description = description;
 	}
 
 	public long getProjectid()
@@ -107,26 +96,6 @@ public class ProjectPost
 		this.projectlink = projectlink;
 	}
 
-	public String getDescription()
-	{
-		return description;
-	}
-
-	public void setDescription(String description)
-	{
-		this.description = description;
-	}
-
-	public List<Photo> getPhotos()
-	{
-		return photos;
-	}
-
-	public void setPhotos(List<Photo> photos)
-	{
-		this.photos = photos;
-	}
-
 	public int getLikescount()
 	{
 		return likescount;
@@ -135,5 +104,15 @@ public class ProjectPost
 	public void setLikescount(int likescount)
 	{
 		this.likescount = likescount;
+	}
+
+	public List<DBFile> getPhotos()
+	{
+		return photos;
+	}
+
+	public void setPhotos(List<DBFile> photos)
+	{
+		this.photos = photos;
 	}
 }

@@ -1,5 +1,6 @@
 package com.lambdaschool.diytracker.services;
 
+import com.lambdaschool.diytracker.models.ProjectPost;
 import com.lambdaschool.diytracker.models.User;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -27,4 +28,6 @@ public interface UserService
     void deleteUserRole(long userid, long roleid);
 
     void addUserRole(long userid, long roleid);
+
+    ProjectPost addProject(ProjectPost projectPost, long userid);
 }

@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.lambdaschool</groupId>
-    <artifactId>bookstore</artifactId>
+    <artifactId>diytracker</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>bookstore</name>
+    <name>diytracker</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -62,8 +62,20 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-hateoas</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
+        </dependency>
+
+        <!-- not entirely sure if this is needed we shall see -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
         </dependency>
 
         <dependency>

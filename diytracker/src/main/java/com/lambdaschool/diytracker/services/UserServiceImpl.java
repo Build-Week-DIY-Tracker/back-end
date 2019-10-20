@@ -3,10 +3,8 @@ package com.lambdaschool.diytracker.services;
 import com.lambdaschool.diytracker.exceptions.ResourceFoundException;
 import com.lambdaschool.diytracker.exceptions.ResourceNotFoundException;
 import com.lambdaschool.diytracker.logging.Loggable;
-import com.lambdaschool.diytracker.models.Role;
-import com.lambdaschool.diytracker.models.User;
-import com.lambdaschool.diytracker.models.UserRoles;
-import com.lambdaschool.diytracker.models.Useremail;
+import com.lambdaschool.diytracker.models.*;
+import com.lambdaschool.diytracker.repository.ProjectPostRepository;
 import com.lambdaschool.diytracker.repository.RoleRepository;
 import com.lambdaschool.diytracker.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +31,9 @@ public class UserServiceImpl implements UserDetailsService,
 
     @Autowired
     private RoleRepository rolerepos;
+
+    @Autowired
+    ProjectPostRepository projectPostRepository;
 
     @Transactional
     @Override
@@ -224,5 +225,17 @@ public class UserServiceImpl implements UserDetailsService,
         {
             throw new ResourceFoundException("Role and User Combination Already Exists");
         }
+    }
+
+    @Override
+    public ProjectPost addProject(ProjectPost projectPost, long userid)
+    {
+        ProjectPost newproject = new ProjectPost();
+        User currentUser = findUserById(userid);
+        newproject.setProjectname(projectPost.getProjectname());
+        newproject.setLikescount(projectPost.getLikescount());
+        newproject.setProjectlink(projectPost.getProjectlink());
+        newproject.setUser(currentUser);
+        return projectPostRepository.save(newproject);
     }
 }
