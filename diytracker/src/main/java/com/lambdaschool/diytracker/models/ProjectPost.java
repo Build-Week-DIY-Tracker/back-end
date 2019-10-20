@@ -41,4 +41,99 @@ public class ProjectPost
 	@Column(nullable = false)
 	private int likescount;
 
+	//constructor
+	public ProjectPost()
+	{
+	}
+
+	public ProjectPost(User user, String projectname)
+	{
+		this.user = user;
+		this.projectname = projectname;
+	}
+
+	public ProjectPost(User user, String projectname, String projectlink)
+	{
+		this.user = user;
+		this.projectname = projectname;
+		this.projectlink = projectlink;
+	}
+
+	public ProjectPost(User user, String projectname, String projectlink, String description)
+	{
+		this.user = user;
+		this.projectname = projectname;
+		this.projectlink = projectlink;
+		this.description = description;
+	}
+
+	public long getProjectid()
+	{
+		return projectid;
+	}
+
+	public void setProjectid(long projectid)
+	{
+		this.projectid = projectid;
+	}
+
+	public User getUser()
+	{
+		return user;
+	}
+
+	public void setUser(User user)
+	{
+		this.user = user;
+	}
+
+	public String getProjectname()
+	{
+		return projectname;
+	}
+
+	public void setProjectname(String projectname)
+	{
+		this.projectname = projectname;
+	}
+
+	public String getProjectlink()
+	{
+		return projectlink;
+	}
+
+	public void setProjectlink(String projectlink)
+	{
+		this.projectlink = projectlink;
+	}
+
+	public String getDescription()
+	{
+		return description;
+	}
+
+	public void setDescription(String description)
+	{
+		this.description = description;
+	}
+
+	public List<Photo> getPhotos()
+	{
+		return photos;
+	}
+
+	public void setPhotos(List<Photo> photos)
+	{
+		this.photos = photos;
+	}
+
+	public int getLikescount()
+	{
+		return likescount;
+	}
+
+	public void setLikescount(int likescount)
+	{
+		this.likescount = likescount;
+	}
 }

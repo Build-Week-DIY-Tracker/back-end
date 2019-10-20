@@ -24,4 +24,48 @@ public class Photo
 	@Column(nullable = false,
 			unique = true)
 	private String path;
+
+	public Photo()
+	{
+	}
+
+	public long getPhotoid()
+	{
+		return photoid;
+	}
+
+	public void setPhotoid(long photoid)
+	{
+		this.photoid = photoid;
+	}
+
+	public ProjectPost getProjectPost()
+	{
+		return projectPost;
+	}
+
+	public void setProjectPost(ProjectPost projectPost)
+	{
+		this.projectPost = projectPost;
+	}
+
+	public String getFilename()
+	{
+		return filename;
+	}
+
+	public void setFilename(String filename)
+	{
+		this.filename = filename;
+	}
+
+	public String getPath()
+	{
+		return path;
+	}
+
+	public void setPath(String path)
+	{
+		this.path = path;
+	}
 }
