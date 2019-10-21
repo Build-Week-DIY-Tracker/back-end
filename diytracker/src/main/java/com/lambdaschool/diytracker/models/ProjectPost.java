@@ -18,11 +18,11 @@ public class ProjectPost
 	@ManyToOne
 	@JoinColumn(name = "userid",
 			nullable = false)
-	@JsonIgnoreProperties("projectposts")
+	@JsonIgnoreProperties("projects")
 	private User user;
 
 	@Column(nullable = false,
-			unique = true)
+			unique = true) //probably should take this out
 	private String projectname;
 
 	@Column(nullable = true)

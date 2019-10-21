@@ -16,9 +16,8 @@ public class DBFile {
 	private String fileName;
 
 	@ManyToOne
-	@JoinColumn(name = "projectid",
-			nullable = false)
-	@JsonIgnoreProperties("photos")
+	@JoinColumn(name = "projectid")
+			@JsonIgnoreProperties("photos")
 	private ProjectPost projectPost;
 
 	private String fileType;
@@ -26,9 +25,11 @@ public class DBFile {
 	@Lob
 	private byte[] data;
 
+
 	public DBFile() {
 
 	}
+
 
 	public DBFile(String fileName, String fileType, byte[] data) {
 		this.fileName = fileName;
@@ -36,13 +37,6 @@ public class DBFile {
 		this.data = data;
 	}
 
-	public DBFile(String fileName, ProjectPost projectPost, String fileType, byte[] data)
-	{
-		this.fileName = fileName;
-		this.projectPost = projectPost;
-		this.fileType = fileType;
-		this.data = data;
-	}
 	// Getters and Setters
 
 
@@ -95,4 +89,5 @@ public class DBFile {
 	{
 		this.data = data;
 	}
+
 }

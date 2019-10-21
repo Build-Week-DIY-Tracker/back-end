@@ -6,6 +6,9 @@ import com.lambdaschool.diytracker.models.UserMinimum;
 import com.lambdaschool.diytracker.models.UserRoles;
 import com.lambdaschool.diytracker.services.RoleService;
 import com.lambdaschool.diytracker.services.UserService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +28,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Loggable
+@ApiOperation(value = "Open endpoint to create users")
 @RestController
 public class OpenController
 {
@@ -47,6 +51,9 @@ public class OpenController
     //     "primaryemail" : "home@local.house"
     // }
 
+    @ApiOperation(value = "create a new user")
+    @ApiResponses(value = {@ApiResponse(code=201, message = "User Created"),
+            @ApiResponse(code= 400, message = "Not Found")})
     @PostMapping(value = "/createnewuser",
                  consumes = {"application/json"},
                  produces = {"application/json"})

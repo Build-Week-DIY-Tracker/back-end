@@ -1,6 +1,7 @@
 package com.lambdaschool.diytracker.controllers;
 
 import com.lambdaschool.diytracker.models.DBFile;
+import com.lambdaschool.diytracker.models.ProjectPost;
 import com.lambdaschool.diytracker.payload.UploadFileResponse;
 import com.lambdaschool.diytracker.services.DBFileStorageService;
 import org.slf4j.Logger;
@@ -9,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
@@ -60,5 +63,21 @@ public class FileController {
 				.header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + dbFile.getFileName() + "\"")
 				.body(new ByteArrayResource(dbFile.getData()));
 	}
+
+	//add photos
+//	@PostMapping(value = "/uploadfile/{projectid}", consumes = {"multipart/form-data"}, produces = {"application/json"})
+	//	public UploadFileResponse uploadFileToProject(@RequestParam("file") MultipartFile file, @PathVariable long projectid)
+	//	{
+	//		DBFile dbFile = DBFileStorageService.storeFileToProject(file, projectid);
+	//
+	//		String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
+	//				.path("/downloadFile/")
+	//				.path(dbFile.getId())
+	//				.toUriString();
+	//
+	//		return new UploadFileResponse(dbFile.getFileName(), fileDownloadUri,
+	//				file.getContentType(), file.getSize());
+	//	}
+
 
 }

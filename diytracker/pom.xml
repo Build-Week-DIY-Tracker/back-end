@@ -170,7 +170,7 @@
 
     <build>
         <!--        <finalName>${project.artifactId}</finalName>-->
-        <finalName>lrod-bookstore</finalName>
+        <finalName>lrod-diytracker</finalName>
 
         <plugins>
             <plugin>

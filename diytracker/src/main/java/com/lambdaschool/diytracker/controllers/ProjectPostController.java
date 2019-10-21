@@ -2,6 +2,8 @@ package com.lambdaschool.diytracker.controllers;
 
 import com.lambdaschool.diytracker.models.ProjectPost;
 import com.lambdaschool.diytracker.services.ProjectPostService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -34,6 +36,7 @@ public class ProjectPostController
 		return new ResponseEntity<>(projectPostList, HttpStatus.OK);
 	}
 
+	@ApiOperation(value = "don't use this yet its broken. add projects through the users endpoint")
 	@PostMapping(value = "/add",
 			consumes = {"application/json"},
 			produces = {"application/json"})
@@ -48,6 +51,8 @@ public class ProjectPostController
 		URI newStudentURI = ServletUriComponentsBuilder.fromCurrentRequest().path("/{projectid}").buildAndExpand(newProject.getProjectid()).toUri();
 		responseHeaders.setLocation(newStudentURI);
 
-		return new ResponseEntity<>(null, responseHeaders, HttpStatus.CREATED);
+		return new ResponseEntity<>(responseHeaders, HttpStatus.CREATED);
 	}
+
+
 }
