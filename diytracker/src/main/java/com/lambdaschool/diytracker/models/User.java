@@ -34,17 +34,20 @@ public class User extends Auditable
     @Column(nullable = false,
             unique = true)
     @Email
+    @JsonIgnore()
     private String primaryemail;
 
     @OneToMany(mappedBy = "user",
                cascade = CascadeType.ALL)
     @JsonIgnoreProperties("user")
+    @JsonIgnore()
     private List<UserRoles> userroles = new ArrayList<>();
 
     @OneToMany(mappedBy = "user",
                cascade = CascadeType.ALL,
                orphanRemoval = true)
     @JsonIgnoreProperties("user")
+    @JsonIgnore()
     private List<Useremail> useremails = new ArrayList<>();
 
     @OneToMany(mappedBy = "user",
