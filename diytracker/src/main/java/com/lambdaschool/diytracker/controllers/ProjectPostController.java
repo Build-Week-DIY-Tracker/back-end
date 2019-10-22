@@ -55,4 +55,23 @@ public class ProjectPostController
 	}
 
 
+	//PUT http://localhost:2019/edit/7
+	@PutMapping(value = "/edit/{projectid}",
+			consumes = {"application/json"})
+	public ResponseEntity<?> updateProject(@RequestBody ProjectPost projectPost,
+	                                          @PathVariable long projectid)
+	{
+		projectPostService.update(projectPost, projectid);
+		return new ResponseEntity<>(HttpStatus.OK);
+	}
+
+
+	//DELETE http://localhost:2019/delete/7
+	@DeleteMapping("/{projectid}")
+	public ResponseEntity<?> deleteProjectById(@PathVariable long projectid)
+	{
+		projectPostService.delete(projectid);
+		return new ResponseEntity<>(HttpStatus.OK);
+	}
+
 }

@@ -11,4 +11,8 @@ public interface ProjectPostService
 	List<ProjectPost> findAll(Pageable pageable);
 
 	ProjectPost save(ProjectPost projectPost);
+
+	ProjectPost update(ProjectPost projectPost, long id);
+
+	void delete(long id);
 }

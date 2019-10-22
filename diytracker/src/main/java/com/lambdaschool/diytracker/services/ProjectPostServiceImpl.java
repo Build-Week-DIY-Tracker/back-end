@@ -1,5 +1,6 @@
 package com.lambdaschool.diytracker.services;
 
+import com.lambdaschool.diytracker.exceptions.ResourceNotFoundException;
 import com.lambdaschool.diytracker.models.ProjectPost;
 import com.lambdaschool.diytracker.models.User;
 import com.lambdaschool.diytracker.repository.ProjectPostRepository;
@@ -46,8 +47,34 @@ public class ProjectPostServiceImpl implements ProjectPostService
 		{
 			throw new EntityNotFoundException(projectPost.getUser().getUsername() + " != " + authentication.getName());
 		}
-
-
 	}
 
+	@Override
+	public ProjectPost update(ProjectPost projectPost, long id)
+	{
+		ProjectPost currentProject = projectPostRepository.findById(id)
+				.orElseThrow(() -> new ResourceNotFoundException(Long.toString(id)));
+
+		if (projectPost.getProjectname() != null)
+		{
+			currentProject.setProjectname(projectPost.getProjectname());
+		}
+		if (projectPost.getProjectlink() != null)
+		{
+			currentProject.setProjectlink(projectPost.getProjectlink());
+		}
+		return projectPostRepository.save(currentProject);
+	}
+
+	@Override
+	public void delete(long id)
+	{
+		if (projectPostRepository.findById(id).isPresent())
+		{
+			projectPostRepository.deleteById(id);
+		} else
+		{
+			throw new EntityNotFoundException(Long.toString(id));
+		}
+	}
 }
