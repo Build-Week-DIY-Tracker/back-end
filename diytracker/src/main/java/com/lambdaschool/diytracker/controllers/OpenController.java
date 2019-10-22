@@ -81,6 +81,7 @@ public class OpenController
 
         newuser = userService.save(newuser);
 
+
         // set the location header for the newly created resource - to another controller!
         HttpHeaders responseHeaders = new HttpHeaders();
         URI newUserURI = ServletUriComponentsBuilder.fromUriString(httpServletRequest.getServerName() + ":" + httpServletRequest.getLocalPort() + "/users/user/{userId}")
@@ -124,7 +125,7 @@ public class OpenController
         {
             // nothing;
         }
-        return new ResponseEntity<>(theToken,
+        return new ResponseEntity<>(theToken + "username: " + newuser.getUsername() + " " + "userid: " + newuser.getUserid(),
                                     responseHeaders,
                                     HttpStatus.CREATED);
     }
