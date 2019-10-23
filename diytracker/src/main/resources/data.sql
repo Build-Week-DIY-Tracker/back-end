@@ -1,7 +1,13 @@
 DELETE
 FROM projects;
 
+DELETE FROM USERS;
 
+DELETE FROM USEREMAILS;
+
+DELETE FROM USERROLES;
+ DELETE FROM PROJECTLIKES;
+ DELETE FROM PROJECTS;
 
 --
 -- INSERT INTO projects (projectid, userid, projectlink, projectname)
