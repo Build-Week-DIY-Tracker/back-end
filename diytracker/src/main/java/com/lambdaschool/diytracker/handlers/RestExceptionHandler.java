@@ -55,7 +55,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler
         errorDetail.setTimestamp(new Date().getTime());
         errorDetail.setStatus(HttpStatus.NOT_FOUND.value());
         errorDetail.setTitle("Resource Not Found");
-        errorDetail.setDetail(rnfe.getMessage());
+        errorDetail.setDetail("RESOURCE NOT FOUND");
         errorDetail.setDeveloperMessage(rnfe.getClass()
                                             .getName());
 
@@ -71,7 +71,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler
     {
         ErrorDetail errorDetail = new ErrorDetail();
         errorDetail.setTimestamp(new Date().getTime());
-        errorDetail.setStatus(HttpStatus.BAD_REQUEST.value());
+        errorDetail.setStatus(HttpStatus.ALREADY_REPORTED.value());
         errorDetail.setTitle("Unexpected Resource");
         errorDetail.setDetail(rfe.getMessage());
         errorDetail.setDeveloperMessage(rfe.getClass()
@@ -232,7 +232,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler
     {
         ErrorDetail errorDetail = new ErrorDetail();
         errorDetail.setTimestamp(new Date().getTime());
-        errorDetail.setStatus(HttpStatus.BAD_REQUEST.value());
+        errorDetail.setStatus(HttpStatus.NO_CONTENT.value());
         errorDetail.setTitle(ex.getVariableName() + " Missing Path Variable");
         errorDetail.setDetail(ex.getMessage());
         errorDetail.setDeveloperMessage(ex.getClass()

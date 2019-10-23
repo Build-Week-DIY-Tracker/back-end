@@ -11,6 +11,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 // User is considered the parent entity
 
@@ -56,6 +57,13 @@ public class User extends Auditable
     @JsonIgnoreProperties("user")
     private List<ProjectPost> projects = new ArrayList<>();
 
+    @ManyToMany
+            @JoinTable(name = "projectlikes",
+                        joinColumns = {@JoinColumn(name = "userid")},
+            inverseJoinColumns = {@JoinColumn(name = "projectid")})
+            @JsonIgnoreProperties("user")
+    Set<ProjectPost> likedProjects;
+
     public User()
     {
     }
@@ -99,6 +107,26 @@ public class User extends Auditable
     public void setUsername(String username)
     {
         this.username = username.toLowerCase();
+    }
+
+    public List<ProjectPost> getProjects()
+    {
+        return projects;
+    }
+
+    public void setProjects(List<ProjectPost> projects)
+    {
+        this.projects = projects;
+    }
+
+    public Set<ProjectPost> getLikedProjects()
+    {
+        return likedProjects;
+    }
+
+    public void setLikedProjects(Set<ProjectPost> likedProjects)
+    {
+        this.likedProjects = likedProjects;
     }
 
     public String getPrimaryemail()

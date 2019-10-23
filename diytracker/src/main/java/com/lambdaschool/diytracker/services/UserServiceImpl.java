@@ -233,9 +233,24 @@ public class UserServiceImpl implements UserDetailsService,
         ProjectPost newproject = new ProjectPost();
         User currentUser = findUserById(userid);
         newproject.setProjectname(projectPost.getProjectname());
-        newproject.setLikescount(projectPost.getLikescount());
+//        newproject.setLikescount(projectPost.getLikescount());
         newproject.setProjectlink(projectPost.getProjectlink());
         newproject.setUser(currentUser);
         return projectPostRepository.save(newproject);
+    }
+
+    @Override
+    public void addProjectLike(long userid, long projectid) throws ResourceFoundException
+    {
+        userrepos.findById(userid).orElseThrow(() -> new ResourceNotFoundException("User id " + userid + " not found!"));
+        projectPostRepository.findById(projectid).orElseThrow(() -> new ResourceNotFoundException("project id " + projectid + " not found!"));
+
+        if (projectPostRepository.checkprojectlikes(userid, projectid) != null)
+        {
+            projectPostRepository.insertProjectLikes(userid, projectid);
+        } else
+        {
+            throw new ResourceFoundException("You cannot un like a project you must make another crud op");
+        }
     }
 }

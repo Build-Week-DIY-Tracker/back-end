@@ -3,10 +3,8 @@ package com.lambdaschool.diytracker;
 import com.github.javafaker.Faker;
 import com.github.javafaker.service.FakeValuesService;
 import com.github.javafaker.service.RandomService;
-import com.lambdaschool.diytracker.models.Role;
-import com.lambdaschool.diytracker.models.User;
-import com.lambdaschool.diytracker.models.UserRoles;
-import com.lambdaschool.diytracker.models.Useremail;
+import com.lambdaschool.diytracker.models.*;
+import com.lambdaschool.diytracker.services.ProjectPostService;
 import com.lambdaschool.diytracker.services.RoleService;
 import com.lambdaschool.diytracker.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +15,8 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 import java.util.Locale;
 
-@Transactional
-@Component
+//@Transactional
+//@Component
 public class SeedData implements CommandLineRunner
 {
     @Autowired
@@ -27,10 +25,13 @@ public class SeedData implements CommandLineRunner
     @Autowired
     UserService userService;
 
+    @Autowired
+    ProjectPostService projectService;
 
     @Override
     public void run(String[] args) throws Exception
     {
+        //create the roles
         Role r1 = new Role("admin");
         Role r2 = new Role("user");
         Role r3 = new Role("data");
@@ -111,6 +112,18 @@ public class SeedData implements CommandLineRunner
                            "misskitty@school.lambda",
                            users);
         userService.save(u5);
+
+
+        //create the projects
+//        ProjectPost p1 = new ProjectPost(u2, "Transformer Costume", "https://www.coolest-homemade-costumes.com/homemade-transformer-costume/");
+//        ProjectPost p2 = new ProjectPost(u2, "Angel Costume", "https://www.coolest-homemade-costumes.com/homemade-transformer-costume/");
+//
+//        //save the projects
+//        projectService.save(p1);
+//        projectService.save(p2);
+//
+//        ArrayList<ProjectPost> projects = new ArrayList<>();
+//        projects.add(new ProjectPost(new User(), p2));
 
         // using JavaFaker create a bunch of regular users
         // https://www.baeldung.com/java-faker

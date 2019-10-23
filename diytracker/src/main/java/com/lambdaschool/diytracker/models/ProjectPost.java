@@ -1,5 +1,6 @@
 package com.lambdaschool.diytracker.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -7,8 +8,10 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
-@Entity(name="projects")
+@Entity
+@Table(name="projects")
 public class ProjectPost
 {
 	@Id
@@ -34,8 +37,10 @@ public class ProjectPost
 	@JsonIgnoreProperties("photo")
 	private List<DBFile> photos = new ArrayList<>();
 
-	@Column(nullable = true)
-	private int likescount = 0;
+	@Column(nullable = false)
+	@JsonIgnoreProperties("projects")
+	@ManyToMany(mappedBy = "likedProjects")
+	Set<User> likes;
 
 	//constructor
 	public ProjectPost()
@@ -95,14 +100,14 @@ public class ProjectPost
 		this.projectlink = projectlink;
 	}
 
-	public int getLikescount()
+	public int getLikes()
 	{
-		return likescount;
+		return likes.size();
 	}
 
-	public void setLikescount(int likescount)
+	public void setLikes(Set<User> likes)
 	{
-		this.likescount = likescount;
+		this.likes = likes;
 	}
 
 	public List<DBFile> getPhotos()

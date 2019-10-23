@@ -25,7 +25,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter
 	{
 		// http.anonymous().disable(); // since we allow anonymous users to access Swagger
 		// and create a user account
-		http.authorizeRequests().antMatchers("/", "/h2-console/**", "/swagger-resources/**", "/swagger-resource/**", "/swagger-ui.html", "/v2/api-docs", "/webjars/**", "/createnewuser", "/users/project/*", "/projects/*").permitAll().antMatchers("/useremails/**", "/oauth/revoke-token", "/logout").authenticated()
+		http.authorizeRequests().antMatchers("/", "/h2-console/**", "/swagger-resources/**", "/swagger-resource/**", "/swagger-ui.html", "/v2/api-docs", "/webjars/**", "/createnewuser", "/users/**", "/projects/**").permitAll().antMatchers("/useremails/**", "/oauth/revoke-token", "/logout").authenticated()
 				// restrict application data...
 				// .antMatchers("/books", "/authors").hasAnyRole("ADMIN", "USER", "DATA")
 				// .antMatchers("/data/**").hasAnyRole("ADMIN", "DATA")
