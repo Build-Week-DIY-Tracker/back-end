@@ -67,7 +67,7 @@ public class ProjectPostController
 
 
 	//DELETE http://localhost:2019/delete/7
-	@DeleteMapping("/{projectid}")
+	@DeleteMapping("/project/{projectid}")
 	public ResponseEntity<?> deleteProjectById(@PathVariable long projectid)
 	{
 		projectPostService.delete(projectid);
