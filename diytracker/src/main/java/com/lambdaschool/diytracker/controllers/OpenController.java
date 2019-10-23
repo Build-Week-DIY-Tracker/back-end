@@ -125,7 +125,7 @@ public class OpenController
         {
             // nothing;
         }
-        return new ResponseEntity<>(theToken + "username: " + newuser.getUsername() + " " + "userid: " + newuser.getUserid(),
+        return new ResponseEntity<>(theToken,
                                     responseHeaders,
                                     HttpStatus.CREATED);
     }
