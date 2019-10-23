@@ -313,4 +313,24 @@ public class UserController
         userService.addProject(projectPost, userid);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
+
+
+    // http://localhost:2019/users/user/4/project/215
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    @PostMapping("/user/{userid}/project/{projectid}")
+    public ResponseEntity<?> postprojectlike(HttpServletRequest request,
+                                               @PathVariable
+                                                       long userid,
+                                               @PathVariable
+                                                       long projectid)
+    {
+        logger.trace(request.getMethod()
+                .toUpperCase() + " " + request.getRequestURI() + " accessed");
+
+        userService.addProjectLike(userid,
+                projectid);
+
+        return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+
 }

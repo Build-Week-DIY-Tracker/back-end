@@ -7,8 +7,10 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
-@Entity(name="projects")
+@Entity
+@Table(name="projects")
 public class ProjectPost
 {
 	@Id
@@ -35,8 +37,9 @@ public class ProjectPost
 	@JsonIgnoreProperties("photo")
 	private List<DBFile> photos = new ArrayList<>();
 
-	@Column(nullable = true)
-	private int likescount = 0;
+	@Column(nullable = false)
+	@ManyToMany(mappedBy = "likedProjects")
+	Set<User> likes;
 
 	//constructor
 	public ProjectPost()
@@ -96,14 +99,14 @@ public class ProjectPost
 		this.projectlink = projectlink;
 	}
 
-	public int getLikescount()
+	public Set<User> getLikes()
 	{
-		return likescount;
+		return likes;
 	}
 
-	public void setLikescount(int likescount)
+	public void setLikes(Set<User> likes)
 	{
-		this.likescount = likescount;
+		this.likes = likes;
 	}
 
 	public List<DBFile> getPhotos()

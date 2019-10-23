@@ -30,4 +30,7 @@ public interface UserService
     void addUserRole(long userid, long roleid);
 
     ProjectPost addProject(ProjectPost projectPost, long userid);
+
+    void addProjectLike(long userid, long projectid);
+
 }

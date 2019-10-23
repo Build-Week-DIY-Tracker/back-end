@@ -31,4 +31,7 @@ public interface RoleRepository extends CrudRepository<Role, Long>
     // user Role instead of roles in order to use Hibernate SQL
     @Query(value = "UPDATE Role SET NAME = :name WHERE roleid = :roleid")
     void updateRoleName(long roleid, String name);
+
+
+
 }

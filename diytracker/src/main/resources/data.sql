@@ -1,5 +1,8 @@
 DELETE
 FROM projects;
+
+
+
 --
 -- INSERT INTO projects (projectid, userid, projectlink, projectname)
 -- 	VALUES (1, 4, 'https://www.coolest-homemade-costumes.com/homemade-transformer-costume/', 'Home Theater'),
