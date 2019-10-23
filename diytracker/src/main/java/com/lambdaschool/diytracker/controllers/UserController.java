@@ -52,7 +52,7 @@ public class UserController
                                                                                                                                                                            dataType = "string",
                                                                                                                                                                            paramType = "query",
                                                                                                                                                                            value = "Sorting criteria in the format: property(,asc|desc). " + "Default sort order is ascending. " + "Multiple sort criteria are supported.")})
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+//    @PreAuthorize("hasAuthority('ROLE_ADMIN')
     @GetMapping(value = "/users",
                 produces = {"application/json"})
     public ResponseEntity<?> listAllUsers(HttpServletRequest request,
@@ -69,7 +69,7 @@ public class UserController
     }
 
     // http://localhost:2019/users/users/all
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+//    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @GetMapping(value = "/users/all",
                 produces = {"application/json"})
     public ResponseEntity<?> reallyListAllUsers(HttpServletRequest request)
@@ -84,7 +84,7 @@ public class UserController
 
 
     // http://localhost:2019/users/user/7
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+//    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @GetMapping(value = "/user/{userId}",
                 produces = {"application/json"})
     public ResponseEntity<?> getUserById(HttpServletRequest request,
@@ -100,7 +100,7 @@ public class UserController
     }
 
     // http://localhost:2019/users/user/name/cinnamon
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+//    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @GetMapping(value = "/user/name/{userName}",
                 produces = {"application/json"})
     public ResponseEntity<?> getUserByName(HttpServletRequest request,
@@ -130,7 +130,7 @@ public class UserController
                                                                                                                                                                            dataType = "string",
                                                                                                                                                                            paramType = "query",
                                                                                                                                                                            value = "Sorting criteria in the format: property(,asc|desc). " + "Default sort order is ascending. " + "Multiple sort criteria are supported.")})
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+//    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @GetMapping(value = "/user/name/like/{userName}",
                 produces = {"application/json"})
     public ResponseEntity<?> getUserLikeName(HttpServletRequest request,
@@ -194,7 +194,7 @@ public class UserController
     //            }
     //        ]
     //        }
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+//    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @PostMapping(value = "/user",
                  consumes = {"application/json"},
                  produces = {"application/json"})
@@ -257,7 +257,7 @@ public class UserController
 
 
     // http://localhost:2019/users/user/14
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+//    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @DeleteMapping("/user/{id}")
     public ResponseEntity<?> deleteUserById(HttpServletRequest request,
                                             @PathVariable
@@ -271,7 +271,7 @@ public class UserController
     }
 
     // http://localhost:2019/users/user/15/role/2
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+//    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @DeleteMapping("/user/{userid}/role/{roleid}")
     public ResponseEntity<?> deleteUserRoleByIds(HttpServletRequest request,
                                                  @PathVariable
@@ -290,7 +290,7 @@ public class UserController
 
 
     // http://localhost:2019/users/user/15/role/2
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+//    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @PostMapping("/user/{userid}/role/{roleid}")
     public ResponseEntity<?> postUserRoleByIds(HttpServletRequest request,
                                                @PathVariable
