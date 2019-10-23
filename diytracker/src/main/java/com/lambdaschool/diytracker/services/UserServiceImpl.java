@@ -240,7 +240,7 @@ public class UserServiceImpl implements UserDetailsService,
     }
 
     @Override
-    public void addProjectLike(long userid, long projectid)
+    public void addProjectLike(long userid, long projectid) throws ResourceFoundException
     {
         userrepos.findById(userid).orElseThrow(() -> new ResourceNotFoundException("User id " + userid + " not found!"));
         projectPostRepository.findById(projectid).orElseThrow(() -> new ResourceNotFoundException("project id " + projectid + " not found!"));

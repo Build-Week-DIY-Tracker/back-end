@@ -1,5 +1,6 @@
 package com.lambdaschool.diytracker.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -38,6 +39,7 @@ public class ProjectPost
 	private List<DBFile> photos = new ArrayList<>();
 
 	@Column(nullable = false)
+	@JsonIgnoreProperties("projects")
 	@ManyToMany(mappedBy = "likedProjects")
 	Set<User> likes;
 
@@ -99,9 +101,9 @@ public class ProjectPost
 		this.projectlink = projectlink;
 	}
 
-	public Set<User> getLikes()
+	public int getLikes()
 	{
-		return likes;
+		return likes.size();
 	}
 
 	public void setLikes(Set<User> likes)

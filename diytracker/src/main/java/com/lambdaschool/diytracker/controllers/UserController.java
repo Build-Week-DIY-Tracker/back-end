@@ -316,7 +316,6 @@ public class UserController
 
 
     // http://localhost:2019/users/user/4/project/215
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @PostMapping("/user/{userid}/project/{projectid}")
     public ResponseEntity<?> postprojectlike(HttpServletRequest request,
                                                @PathVariable
@@ -332,5 +331,6 @@ public class UserController
 
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
+
 
 }

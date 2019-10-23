@@ -61,6 +61,7 @@ public class User extends Auditable
             @JoinTable(name = "projectlikes",
                         joinColumns = {@JoinColumn(name = "userid")},
             inverseJoinColumns = {@JoinColumn(name = "projectid")})
+            @JsonIgnoreProperties("user")
     Set<ProjectPost> likedProjects;
 
     public User()
