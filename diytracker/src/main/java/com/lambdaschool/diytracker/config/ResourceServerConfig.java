@@ -12,56 +12,32 @@ import org.springframework.security.oauth2.provider.error.OAuth2AccessDeniedHand
 public class ResourceServerConfig extends ResourceServerConfigurerAdapter
 {
 
-    private static final String RESOURCE_ID = "resource_id";
+	private static final String RESOURCE_ID = "resource_id";
 
-    @Override
-    public void configure(ResourceServerSecurityConfigurer resources)
-    {
-        resources.resourceId(RESOURCE_ID)
-                 .stateless(false);
-    }
+	@Override
+	public void configure(ResourceServerSecurityConfigurer resources)
+	{
+		resources.resourceId(RESOURCE_ID).stateless(false);
+	}
 
-    @Override
-    public void configure(HttpSecurity http) throws Exception
-    {
-        // http.anonymous().disable(); // since we allow anonymous users to access Swagger
-        // and create a user account
-        http.authorizeRequests()
-            .antMatchers("/",
-                         "/h2-console/**",
-                         "/swagger-resources/**",
-                         "/swagger-resource/**",
-                         "/swagger-ui.html",
-                         "/v2/api-docs",
-                         "/webjars/**",
-                         "/createnewuser",
-                    "/users/.**",
-                    "/projects/**")
-            .permitAll()
-            .antMatchers("/useremails/**",
-                         "/oauth/revoke-token",
-                         "/logout")
-            .authenticated()
-            // restrict application data...
-            // .antMatchers("/books", "/authors").hasAnyRole("ADMIN", "USER", "DATA")
-            // .antMatchers("/data/**").hasAnyRole("ADMIN", "DATA")
-            //
-            // restrict based on HttpMethod and endpoint
-            // .antMatchers(HttpMethod.GET, "/users/user/**").hasAnyRole("USER")
-            .antMatchers("/roles/**",
-                         "/actuator/**")
-            .hasAnyRole("ADMIN", "USER", "DATA")
-            .and()
-            .exceptionHandling()
-            .accessDeniedHandler(new OAuth2AccessDeniedHandler());
 
-        // http.requiresChannel().anyRequest().requiresSecure(); // required for https
-        http.csrf()
-            .disable();
-        http.headers()
-            .frameOptions()
-            .disable();
-        http.logout()
-            .disable(); //disabled the spring log out feature
-    }
+	@Override
+	public void configure(HttpSecurity http) throws Exception
+	{
+		// http.anonymous().disable(); // since we allow anonymous users to access Swagger
+		// and create a user account
+		http.authorizeRequests().antMatchers("/", "/h2-console/**", "/swagger-resources/**", "/swagger-resource/**", "/swagger-ui.html", "/v2/api-docs", "/webjars/**", "/createnewuser", "/users/**", "/projects/**").permitAll().antMatchers("/useremails/**", "/oauth/revoke-token", "/logout").authenticated()
+				// restrict application data...
+				// .antMatchers("/books", "/authors").hasAnyRole("ADMIN", "USER", "DATA")
+				// .antMatchers("/data/**").hasAnyRole("ADMIN", "DATA")
+				//
+				// restrict based on HttpMethod and endpoint
+				// .antMatchers(HttpMethod.GET, "/users/user/**").hasAnyRole("USER")
+				.antMatchers("/roles/**", "/actuator/**").hasAnyRole("ADMIN", "USER", "DATA").and().exceptionHandling().accessDeniedHandler(new OAuth2AccessDeniedHandler());
+
+		// http.requiresChannel().anyRequest().requiresSecure(); // required for https
+		http.csrf().disable();
+		http.headers().frameOptions().disable();
+		http.logout().disable(); //disabled the spring log out feature
+	}
 }

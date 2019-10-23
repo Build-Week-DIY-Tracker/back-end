@@ -67,14 +67,14 @@ public class ProjectPostServiceImpl implements ProjectPostService
 	}
 
 	@Override
-	public void delete(long id)
+	public void delete(long id) throws ResourceNotFoundException
 	{
 		if (projectPostRepository.findById(id).isPresent())
 		{
 			projectPostRepository.deleteById(id);
 		} else
 		{
-			throw new EntityNotFoundException(Long.toString(id));
+			throw new ResourceNotFoundException(Long.toString(id) + "notfound");
 		}
 	}
 }
