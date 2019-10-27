@@ -173,7 +173,8 @@ public class UserController
                             .toUpperCase() + " " + request.getRequestURI() + " accessed");
 
         User u = userService.findByName(authentication.getName());
-        return new ResponseEntity<>(u,
+
+        return new ResponseEntity<>(authentication.getDetails(),
                                     HttpStatus.OK);
     }
 
@@ -316,7 +317,7 @@ public class UserController
 
 
     // http://localhost:2019/users/user/4/project/215
-    @PostMapping("/user/{userid}/project/{projectid}")
+    @PostMapping(value = "/user/{userid}/project/{projectid}", consumes = {"application/json"}, produces = {"application/json"})
     public ResponseEntity<?> postprojectlike(HttpServletRequest request,
                                                @PathVariable
                                                        long userid,

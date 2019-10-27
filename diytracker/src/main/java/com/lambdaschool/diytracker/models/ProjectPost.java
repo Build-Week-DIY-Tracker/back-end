@@ -39,7 +39,7 @@ public class ProjectPost
 
 	@Column(nullable = false)
 	@JsonIgnoreProperties("projects")
-	@ManyToMany(mappedBy = "likedProjects")
+	@ManyToMany(mappedBy = "likedProjects", cascade = CascadeType.ALL)
 	Set<User> likes;
 
 	//constructor
