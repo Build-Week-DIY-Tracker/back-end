@@ -57,7 +57,7 @@ public class User extends Auditable
     @JsonIgnoreProperties("user")
     private List<ProjectPost> projects = new ArrayList<>();
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
             @JoinTable(name = "projectlikes",
                         joinColumns = {@JoinColumn(name = "userid")},
             inverseJoinColumns = {@JoinColumn(name = "projectid")})

@@ -66,12 +66,15 @@ public class ProjectPostController
 	}
 
 
+
 	//DELETE http://localhost:2019/delete/7
+	@ApiOperation(value = "")
 	@DeleteMapping("/project/{projectid}")
 	public ResponseEntity<?> deleteProjectById(@PathVariable long projectid)
 	{
+
 		projectPostService.delete(projectid);
-		return new ResponseEntity<>(HttpStatus.OK);
+		return new ResponseEntity<>("Project" + projectid + "Deleted Successfully", HttpStatus.OK);
 	}
 
 }
